@@ -1,12 +1,10 @@
 # 🗂️ Sistema de Gestión de Tareas (API Flask + SQLite)
 
-**Proyecto desarrollado para la asignatura _Programación en Redes_ de la Tecnicatura en Desarrollo de Software (IFTS).**
+**Proyecto desarrollado para la asignatura _Programación sobre Redes_ de la Tecnicatura en Desarrollo de Software (IFTS).**
 
 Esta API REST en Python utiliza Flask y SQLite para gestionar usuarios con contraseñas seguras y tareas básicas.  
 Permite registrar usuarios, iniciar sesión y visualizar una página de bienvenida.  
 Los datos se almacenan localmente en SQLite, y las pruebas se realizan mediante Postman o cliente en consola.
-
-⚠️ _Nota:_ La API se ejecuta localmente con Flask y no puede desplegarse en GitHub Pages, que solo soporta sitios estáticos.
 
 El repositorio contiene el código fuente, documentación detallada y capturas de pruebas exitosas.
 
@@ -42,6 +40,7 @@ El repositorio contiene el código fuente, documentación detallada y capturas d
 ```bash
 python -m venv venv  
 venv\Scripts\activate  # En Windows
+
 ```
 
 ### 📌 3️⃣ Instalar las dependencias
@@ -56,7 +55,7 @@ pip install Flask==3.1.1 Flask-SQLAlchemy
 python servidor.py
 ```
 
-### El servidor se ejecutará en: http://127.0.0.1:5000/
+### El servidor se ejecutará en: https://pfo2-programacionredes.onrender.com/
 
 ## 🔗 Endpoints de la API
 
@@ -108,6 +107,7 @@ Retorna una página HTML de bienvenida.
 </body>
 </html>
 ```
+
 ## 📚 Conceptos
 
 ### 🔐 ¿Por qué hashear contraseñas?
@@ -148,12 +148,40 @@ Aquí se muestran algunas pruebas realizadas con Postman:
 
 ---
 
-## 🚀 Notas sobre despliegue en GitHub Pages 
+---
 
-- Este proyecto es una API Flask, por lo tanto se ejecuta en un servidor local (localhost).
-- GitHub Pages solo aloja sitios estáticos (HTML, CSS, JS), por lo que la API no se puede desplegar allí.
-- El código fuente y la documentación se suben al repositorio de GitHub para su entrega.
-- Para desplegar la API, es necesario un servidor o plataforma que soporte Flask (por ejemplo, Heroku, AWS, etc.).
+## 📸 Capturas de pruebas exitosas (Deploy en Render)
+
+Estas son las mismas pruebas pero ejecutadas en la versión desplegada en Render:
+
+---
+
+### Registro de usuario (`POST /registro`)
+
+![Registro en Render](capturas_postman_render/registro_render.png)
+
+---
+
+### Login exitoso (`POST /login`)
+
+![Login en Render](capturas_postman_render/login_render.png)
+
+---
+
+### Visualización de tareas (`GET /tareas`)
+
+![Tareas en Render](capturas_postman_render/tareas_render.png)
+
+---
+
+## 🚀 Notas sobre despliegue
+
+- Este proyecto es una API Flask que se ejecuta en un servidor, por lo que no puede desplegarse en GitHub Pages, que solo aloja sitios estáticos (HTML, CSS, JS).  
+- Para facilitar la prueba en línea, el proyecto está desplegado en Render, una plataforma que soporta aplicaciones web con backend en Python.  
+- Es posible acceder y probar la API en:  
+  `https://pfo2-programacionredes.onrender.com/` 
+- El código fuente y la documentación están en este repositorio de GitHub para su entrega y seguimiento.  
+- Otras opciones para desplegar proyectos similares incluyen Heroku, AWS, DigitalOcean, entre otras.
 
 
 ## 👩‍💻 Autora
