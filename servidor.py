@@ -1,7 +1,7 @@
-
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
+import os  # <-- importamos para leer variables de entorno
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///usuarios.db'
@@ -69,4 +69,6 @@ def tareas():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # Crear tablas antes de arrancar el servidor
-    app.run(debug=True)
+    
+    port = int(os.environ.get("PORT", 5000))  # Leer el puerto que asigna Render, si no 5000
+    app.run(host="0.0.0.0", port=port, debug=True)  # Escuchar en todas las interfaces y puerto dinámico
