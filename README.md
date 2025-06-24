@@ -27,7 +27,7 @@ El repositorio contiene el código fuente, documentación detallada y capturas d
 - 🗄️ Flask-SQLAlchemy  
 - 🔐 Werkzeug.security  
 - 🗂️ SQLite  
-- 📫 Cliente de pruebas: Postman  
+- 📫 Cliente de pruebas: Postman y script en Python con `requests`
 
 ---
 
@@ -149,6 +149,14 @@ Aquí se muestran algunas pruebas realizadas con Postman:
 ---
 
 ---
+
+### Cliente en consola interactuando con el servidor
+
+Aquí se muestra una captura de pantalla del cliente en consola interactuando con el servidor local:
+
+![Cliente en consola](capturas_terminal/cliente_servidor.png)
+
+
 
 ## 📸 Capturas de pruebas exitosas (Deploy en Render)
 
